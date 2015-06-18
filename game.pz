@@ -1,0 +1,109 @@
+title Lightening Talk
+author Chris McCluskey
+homepage www.github.com/blueninj0r
+
+========
+OBJECTS
+========
+
+Background
+LIGHTGREEN GREEN
+11111
+01111
+11101
+11111
+10111
+
+
+Wall
+BROWN DARKBROWN
+00010
+11111
+01000
+11111
+00010
+
+Player
+Black Orange White Blue
+.000.
+.111.
+22222
+.333.
+.3.3.
+
+HappyPlayer
+Black Orange White Blue
+.000.
+21112
+.222.
+.333.
+.3.3.
+
+Crate
+Red Black
+01000
+01011
+01001
+01011
+01011
+
+Lava
+Orange Red
+01010
+10101
+01010
+10101
+01010
+
+
+=======
+LEGEND
+=======
+
+. = Background
+# = Wall
+P = Player
+* = Crate
+L = Lava
+
+
+=======
+SOUNDS
+=======
+
+Crate MOVE 36772507
+
+================
+COLLISIONLAYERS
+================
+
+Background
+Player, Wall, Crate, HappyPlayer
+Lava
+
+======
+RULES
+======
+
+[ >  Player | Crate ] -> [  >  Player | > Crate  ]
+[ Crate | Lava ] -> [ DOWN Crate | Lava]
+[ Crate Lava ] [ Player ] -> [ Crate Lava ] [ HappyPlayer ]
+
+==============
+WINCONDITIONS
+==============
+
+Some HappyPlayer
+
+=======
+LEVELS
+=======
+
+
+########
+#......#
+#P*....#
+#####LL#
+########
+
+
