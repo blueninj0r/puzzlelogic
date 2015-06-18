@@ -67,14 +67,14 @@
                                   </p>
                                   <pre><code>
   // I want to find out which sandwiches are dairy free
-  foreach piece in sandwichs:
+  foreach piece in sandwiches:
     if piece.has_dairy is false:
       my_menu.add (piece)
                                   </code></pre>
                                 </section>
 
                                 <section>
-                                  <h2>I'll let someone else worry about it</h2>
+                                  <h2>Declarative Programming</h2>
                                   <p>Declarative Programming languages and techniques focus on</p>
                                   <ul>
                                     <li>Specifying what you want...</li>
@@ -84,18 +84,17 @@
 
                                 <section>
                                   <h2>Logic Programming</h2>
-                                  <p>A subparadigm of declarative programming where we get results through application of rules about a problem domain</p>
-                                  <p>The language manages flow of control by applying the rules across its data structures and constructing results</p>
+                                  <p>Subparadigm where we get results through application of rules about a problem domain</p>
                                 </section>
 
                                 <section>
                                   <h2>Goodbye, IF</h2>
-                                  <p>Someone else has implemented flow of control in a single place and I can focus on defining what I want my program to do</p>
+                                  <p>Our only concern as developers is to write rules and their outcomes</p>
                                 </section>
 
                                 <section>
                                   <h2>PuzzleScript</h2>
-                                  <p>Game engine using a rules based DSL to define game logic</p>
+                                  <p>Tile based game engine using a rules based DSL to define game logic</p>
                                   <ul>
                                     <li>Implemented in JS - create and publish games from the web</li>
                                     <li>Lives here: <a href="http://www.puzzlescript.net/">http://www.puzzlescript.net/</a></li>
@@ -104,15 +103,53 @@
                                 </section>
 
                                 <section>
-                                  <iframe src="http://www.puzzlescript.net/" height="768" width="1024">
+                                  <h2>A PuzzleScript Rule</h2>
+                                  <pre>
+                                    <code>
+           [ > Player | Crate ] -> [ > Player | > Crate ]
+                                    </code>
+                                  </pre>
+                                </section>
+
+                                <section>
+                                  <iframe src="http://www.puzzlescript.net/play.html?p=b6446e7bab0f9a7ca2e4" height="768" width="1024">
                                     <p>Your browser does not support iframes.</p>
                                   </iframe>
+                                </section>
+
+                                 <section>
+                                  <iframe src="http://www.puzzlescript.net/editor.html?hack=b6446e7bab0f9a7ca2e4" height="768" width="1024">
+                                    <p>Your browser does not support iframes.</p>
+                                  </iframe>
+                                 </section>
+
+                                 <section>
+                                  <h2>My PuzzleScript Rules</h2>
+                                  <pre>
+                                    <code>
+======
+RULES
+======
+
+[ >  Player | Crate ] -> [  >  Player | > Crate  ]
+[ Crate | Lava ] -> [ DOWN Crate | Lava]
+[ Crate Lava ] [ Player ] -> [ Crate Lava ] [ HappyPlayer ]
+                                    </code>
+                                  </pre>
                                 </section>
 
                                 <section>
                                   <h2>It's Logical; Be Declarative</h2>
                                   <p>Higher level abstractions and different approaches help us focus on solving problems</p>
                                   <p>Lower level artifacts like IF are important but too widely present in our code</p>
+                                </section>
+
+
+                                <section>
+                                  <h2>That's great...what about the REAL world?</h2>
+                                  <p>SQL</p>
+                                  <p>LINQ in C#</p>
+                                  <p>Google: declarative programming [your language] </p>
                                 </section>
 
 			</div>
